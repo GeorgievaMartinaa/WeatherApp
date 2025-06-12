@@ -50,13 +50,9 @@ public class ForecastServiceImpl implements ForecastService {
     @Override
     @Transactional
     public void fetchAndSaveForecasts() {
+        forecastRepository.deleteAll();
+
         List<City> cities = cityRepository.findAll();
-
-        //delete old weather forecast information
-        for (City city:cities) {
-            forecastRepository.deleteByCity_Name(city.getName());
-        }
-
         for (City city:cities) {
             List<ForecastDTO> response;
             try {

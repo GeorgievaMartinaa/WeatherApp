@@ -45,12 +45,7 @@ public class WeatherAPIClient {
             JsonNode weatherGroup = day.path("weather");
             String weather = weatherGroup.get(0).path("main").asText();
             String weatherDesc = weatherGroup.get(0).path("description").asText();
-            boolean rain=false;
-
-            if(weather.equals("Rain"))
-            {
-                rain=true;
-            }
+            boolean rain= (weather.equals("Rain"));
 
             ForecastDTO forecastDTO = new ForecastDTO(city,date,maxTemp, rain,weatherDesc);
 

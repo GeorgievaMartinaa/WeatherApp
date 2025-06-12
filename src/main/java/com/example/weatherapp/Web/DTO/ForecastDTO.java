@@ -10,9 +10,18 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ForecastDTO {
+    private int id;
     private String city;
     private LocalDate date;
     private int maxTemp;
     private boolean rainyDay;
     private String rainDesc;
+
+    public ForecastDTO(String city, LocalDate date, int maxTemp, boolean rainyDay, String rainDesc) {
+        this.city = city;
+        this.date = date;
+        this.maxTemp = maxTemp;
+        this.rainyDay = rainyDay;
+        this.rainDesc = rainDesc;
+    }
 }

@@ -20,7 +20,9 @@ public class ForecastMapper {
     }
 
     public ForecastDTO entityToDTO(Forecast forecast){
-        return new ForecastDTO(forecast.getCity().getName(),
+        return new ForecastDTO(
+                forecast.getId(),
+                forecast.getCity().getName(),
                 forecast.getDate(),
                 forecast.getMaxTemp(),
                 forecast.isRainyDay(),

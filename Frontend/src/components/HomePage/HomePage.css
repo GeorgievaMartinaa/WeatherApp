@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.table-group{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.hot-days{
+    align-items: center;
+}
+.table{
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+}
+
+#sunny td, #sunny th{
+    border: 1px solid gold;
+    padding: 15px;
+    text-align: center;
+}
+
+#rainy td, #rainy th{
+    border: 1px solid darkblue;
+    padding: 15px;
+    text-align: center;
+}
+
+.description{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}

@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/weather")
-@CrossOrigin(origins = "http://localhost:63342")
+@CrossOrigin(origins = "*")
 public class WeatherRestController {
     private final ForecastService forecastService;
 
